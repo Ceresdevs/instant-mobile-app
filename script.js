@@ -1,4 +1,4 @@
-//firebase config
+//firebase configuration
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
 const firebaseConfig = {};
 const app = initializeApp(firebaseConfig);
