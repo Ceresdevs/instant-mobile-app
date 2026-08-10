@@ -1,8 +1,18 @@
-//firebase configuration
+//firebase config 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-app.js";
-const firebaseConfig = {};
+
+//adding firebase database
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.17.1/firebase-database.js";
+const firebaseConfig = {
+  //harcoded link since hindi woring ang 'process method'
+    databaseURL: "https://leads-tracker-app-222cc-default-rtdb.asia-southeast1.firebasedatabase.app"
+}
+
 const app = initializeApp(firebaseConfig);
-console.log(app)
+const database = getDatabase(app);
+//end of firebase config
+
+console.log(firebaseConfig.databaseURL)
 
 let myLeads = [];
 let oldLeads = [1, 2, 3, 4, 5];
@@ -80,3 +90,4 @@ inputBtn.addEventListener("click", function () {
   //calling the function to render the arrays when it's click
   render(myLeads);
 });
+
